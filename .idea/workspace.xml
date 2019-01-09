@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ATSP:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ac49ee5c-6821-4350-ae9a-361ffc53ae12" name="Default Changelist" comment="AtspSimulatedAnnealing&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/production/ATSP/ATSP.class&#10;#&#9;out/production/ATSP/AtspGreedy.class&#10;#&#9;out/production/ATSP/AtspRandom.class&#10;#&#9;out/production/ATSP/Main.class">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ATSP_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ATSP_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/24.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL_atsp.tar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATSP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TSP.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nowy folder/ft53.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nowy folder/ft70.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nowy folder/ftv170.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nowy folder/ftv33.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nowy folder/ftv35.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nowy folder/ftv38.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nowy folder/ftv44.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nowy folder/ftv47.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nowy folder/ftv55.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nowy folder/ftv64.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nowy folder/ftv70.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nowy folder/kro124p.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nowy folder/p43.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nowy folder/rbg323.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nowy folder/rbg358.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nowy folder/rbg403.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nowy folder/rbg443.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nowy folder/ry48p.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprawko cz2.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atsp-sol.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atsp/ft53.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atsp/ft70.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atsp/ftv170.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atsp/ftv33.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atsp/ftv35.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atsp/ftv38.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atsp/ftv44.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atsp/ftv47.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atsp/ftv55.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atsp/ftv64.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atsp/ftv70.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atsp/kro124p.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atsp/p43.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atsp/rbg323.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atsp/rbg358.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atsp/rbg403.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atsp/rbg443.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atsp/ry48p.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmulti2/ft53.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmulti2/ft70.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmulti2/ftv170.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmulti2/ftv33.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmulti2/ftv35.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmulti2/ftv38.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmulti2/ftv44.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmulti2/ftv47.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmulti2/ftv55.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmulti2/ftv64.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmulti2/ftv70.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmulti2/kro124p.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmulti2/p43.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmulti2/ry48p.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmultirun/ft53.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmultirun/ft70.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmultirun/ftv170.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmultirun/ftv33.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmultirun/ftv35.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmultirun/ftv38.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmultirun/ftv55.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmultirun/ftv70.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmultirun/p43.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atspmultirun/ry48p.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/createPlots.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc.ps" beforeDir="false" afterPath="$PROJECT_DIR$/doc.ps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/bests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/Quality.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/general_ft53.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/general_ft70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/general_ftv170.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/general_ftv33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/general_ftv35.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/general_ftv38.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/general_ftv44.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/general_ftv47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/general_ftv55.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/general_ftv64.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/general_ftv70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/general_kro124p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/general_p43.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/general_rbg323.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/general_rbg358.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/general_rbg403.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/general_rbg443.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/general_ry48p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/multi_10_rbg403.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/multi_300_ft53.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/multi_300_ft70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/multi_300_ftv170.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/multi_300_ftv33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/multi_300_ftv35.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/multi_300_ftv38.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/multi_300_ftv44.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/multi_300_ftv47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/multi_300_ftv55.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/multi_300_ftv64.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/multi_300_ftv70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/multi_300_kro124p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/multi_300_p43.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/multi_300_ry48p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/time_ft53.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/time_ft70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/time_ftv170.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/time_ftv33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/time_ftv35.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/time_ftv38.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/time_ftv44.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/time_ftv47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/time_ftv55.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/time_ftv64.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/time_ftv70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/time_kro124p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/time_p43.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/time_rbg323.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/time_rbg358.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/time_rbg403.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/time_rbg443.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/greedy/time_ry48p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/Quality.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/general_ft53.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/general_ft70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/general_ftv170.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/general_ftv33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/general_ftv35.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/general_ftv38.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/general_ftv44.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/general_ftv47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/general_ftv55.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/general_ftv64.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/general_ftv70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/general_kro124p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/general_p43.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/general_rbg323.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/general_rbg358.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/general_rbg403.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/general_rbg443.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/general_ry48p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/time_ft53.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/time_ft70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/time_ftv170.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/time_ftv33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/time_ftv35.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/time_ftv38.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/time_ftv44.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/time_ftv47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/time_ftv55.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/time_ftv64.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/time_ftv70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/time_kro124p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/time_p43.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/time_rbg323.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/time_rbg358.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/time_rbg403.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/time_rbg443.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/random/time_ry48p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/Quality.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/general_ft53.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/general_ft70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/general_ftv170.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/general_ftv33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/general_ftv35.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/general_ftv38.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/general_ftv44.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/general_ftv47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/general_ftv55.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/general_ftv64.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/general_ftv70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/general_kro124p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/general_p43.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/general_rbg323.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/general_rbg358.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/general_rbg403.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/general_rbg443.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/general_ry48p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/time_ft53.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/time_ft70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/time_ftv170.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/time_ftv33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/time_ftv35.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/time_ftv38.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/time_ftv44.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/time_ftv47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/time_ftv55.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/time_ftv64.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/time_ftv70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/time_kro124p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/time_p43.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/time_rbg323.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/time_rbg358.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/time_rbg403.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/time_rbg443.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simpleheuristic/time_ry48p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/Quality.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/general_ft53.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/general_ft70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/general_ftv170.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/general_ftv33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/general_ftv35.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/general_ftv38.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/general_ftv44.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/general_ftv47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/general_ftv55.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/general_ftv64.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/general_ftv70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/general_kro124p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/general_p43.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/general_rbg323.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/general_rbg358.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/general_rbg403.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/general_rbg443.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/general_ry48p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/time_ft53.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/time_ft70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/time_ftv170.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/time_ftv33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/time_ftv35.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/time_ftv38.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/time_ftv44.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/time_ftv47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/time_ftv55.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/time_ftv64.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/time_ftv70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/time_kro124p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/time_p43.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/time_rbg323.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/time_rbg358.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/time_rbg403.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/time_rbg443.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/simulated/time_ry48p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/Quality.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/general_ft53.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/general_ft70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/general_ftv170.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/general_ftv33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/general_ftv35.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/general_ftv38.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/general_ftv44.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/general_ftv47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/general_ftv55.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/general_ftv64.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/general_ftv70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/general_kro124p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/general_p43.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/general_rbg323.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/general_rbg358.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/general_rbg403.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/general_rbg443.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/general_ry48p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/multi_300_ft53.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/multi_300_ft70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/multi_300_ftv170.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/multi_300_ftv33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/multi_300_ftv35.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/multi_300_ftv38.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/multi_300_ftv44.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/multi_300_ftv47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/multi_300_ftv55.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/multi_300_ftv64.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/multi_300_ftv70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/multi_300_kro124p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/multi_300_p43.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/multi_300_ry48p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/time_ft53.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/time_ft70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/time_ftv170.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/time_ftv33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/time_ftv35.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/time_ftv38.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/time_ftv44.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/time_ftv47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/time_ftv55.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/time_ftv64.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/time_ftv70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/time_kro124p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/time_p43.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/time_rbg323.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/time_rbg358.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/time_rbg403.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/time_rbg443.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/steepest/time_ry48p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/Quality.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/general_ft53.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/general_ft70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/general_ftv170.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/general_ftv33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/general_ftv35.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/general_ftv38.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/general_ftv44.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/general_ftv47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/general_ftv55.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/general_ftv64.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/general_ftv70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/general_kro124p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/general_p43.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/general_rbg323.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/general_rbg358.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/general_rbg403.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/general_rbg443.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/general_ry48p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/time_ft53.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/time_ft70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/time_ftv170.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/time_ftv33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/time_ftv35.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/time_ftv38.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/time_ftv44.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/time_ftv47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/time_ftv55.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/time_ftv64.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/time_ftv70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/time_kro124p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/time_p43.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/time_rbg323.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/time_rbg358.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/time_rbg403.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/time_rbg443.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/tabu/time_ry48p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ATSP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TSP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AtspGreedy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TSPGreedy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AtspRandom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TSPRandom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AtspSimpleHeuristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TSPSimpleHeuristic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AtspSimulatedAnnealing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TSPSimulatedAnnealing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AtspSteepest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TSPSteepest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AtspTabu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TSPTabu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test0/ft53.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test1/ft53.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test1/p43.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test2/rbg358.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test3/ft70.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test4/p43.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test4/rbg323.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test4/rbg358.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test4/rbg403.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test4/rbg443.atsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test4/ry48p.atsp" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1832104382">
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="2355" />
+          <entry key="txt" value="41" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="2355" />
+          <entry key="PLAIN_TEXT" value="41" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="25" />
+          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="8" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="8" />
+          <entry key="project.open.time.9" value="4" />
+          <entry key="project.opened" value="25" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="atsp" value="1" />
+          <entry key="java" value="24" />
+          <entry key="txt" value="10" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="24" />
+          <entry key="PLAIN_TEXT" value="11" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-580790318">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-827211517">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="268" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="268" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2261">
+              <caret line="134" column="9" lean-forward="true" selection-start-line="134" selection-start-column="9" selection-end-line="134" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TSP.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1598">
+              <caret line="94" column="70" lean-forward="true" selection-start-line="94" selection-start-column="70" selection-end-line="94" selection-end-column="70" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/TSPGreedy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1">
+              <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+              <folding>
+                <element signature="e#119#120#0" expanded="true" />
+                <element signature="e#169#170#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TSPSimulatedAnnealing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TSPTabu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2125">
+              <caret line="128" column="16" selection-start-line="128" selection-start-column="16" selection-end-line="128" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>0</find>
+      <find>infi</find>
+      <find>infini</find>
+      <find>System</find>
+      <find>sysł</find>
+      <find>readAllFiles</find>
+      <find>random()</find>
+      <find>Random</find>
+      <find>this.</find>
+      <find>round</find>
+      <find>println</find>
+      <find>print</find>
+      <find>evaluatedSolutions</find>
+      <find>bestSolution</find>
+      <find>inf</find>
+      <find>INF</find>
+      <find>calc</find>
+      <find>calculateCostCha</find>
+      <find>calculatecostC</find>
+      <find>random</find>
+      <find>generateRandomPermutations</find>
+      <find>calculateCostChangeOnSwap</find>
+      <find>iterations</find>
+      <find>getNextResult</find>
+      <find>next</find>
+      <find>maxDiff</find>
+      <find>System.out.println</find>
+      <find>halfSize*secondElementListIndex</find>
+      <find>(halfSize*secondElementListIndex))</find>
+      <find>todo</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>currentSolution</replace>
+      <replace>print</replace>
+      <replace>(halfSize*secondElementListIndex)</replace>
+      <replace>halfSize)+(halfSize*secondElementListIndex)</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/AtspGreedy.java" />
+        <option value="$PROJECT_DIR$/src/AtspSteepest.java" />
+        <option value="$PROJECT_DIR$/src/AtspSimpleHeuristic.java" />
+        <option value="$PROJECT_DIR$/src/AtspRandom.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/ATSP.java" />
+        <option value="$PROJECT_DIR$/src/AtspTabu.java" />
+        <option value="$PROJECT_DIR$/src/AtspSimulatedAnnealing.java" />
+        <option value="$PROJECT_DIR$/src/TSPSimulatedAnnealing.java" />
+        <option value="$PROJECT_DIR$/src/TSP.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="85" />
+    <option name="y" value="25" />
+    <option name="width" value="1750" />
+    <option name="height" value="970" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TSP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547035415489" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\PROJECTS\ATSP" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\PROJECTS\ATSP\test2" />
+      <recent name="E:\PROJECTS\ATSP\test1" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="$APPLICATION_HOME_DIR$/jre64" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="TSP" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ac49ee5c-6821-4350-ae9a-361ffc53ae12" name="Default Changelist" comment="" />
+      <created>1539887734284</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1539887734284</updated>
+    </task>
+    <task id="LOCAL-00001" summary="infinity added and better memory management">
+      <created>1540492600443</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1540492600443</updated>
+    </task>
+    <task id="LOCAL-00002" summary="2 way to run">
+      <created>1540750779443</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1540750779443</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Merge remote-tracking branch 'remotes/origin/crucialChanges'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/production/ATSP/ATSP.class&#10;#&#9;out/production/ATSP/AtspGreedy.class&#10;#&#9;out/production/ATSP/AtspRandom.class&#10;#&#9;out/production/ATSP/Main.class">
+      <created>1541450610523</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1541450610523</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Merge remote-tracking branch 'remotes/origin/crucialChanges'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/production/ATSP/ATSP.class&#10;#&#9;out/production/ATSP/AtspGreedy.class&#10;#&#9;out/production/ATSP/AtspRandom.class&#10;#&#9;out/production/ATSP/Main.class">
+      <created>1544391721257</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1544391721257</updated>
+    </task>
+    <task id="LOCAL-00005" summary="AtspSimulatedAnnealing&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/production/ATSP/ATSP.class&#10;#&#9;out/production/ATSP/AtspGreedy.class&#10;#&#9;out/production/ATSP/AtspRandom.class&#10;#&#9;out/production/ATSP/Main.class">
+      <created>1544472298027</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1544472298027</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21879195" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4986577" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.490604" weight="0.32765958" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4986577" weight="0.32907802" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49731544" weight="0.32907802" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5013423" side_tool="true" visible="true" weight="0.32765958" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49463087" weight="0.32765958" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49798658" weight="0.32907802" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24496645" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32907802" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="infinity added and better memory management" />
+    <MESSAGE value="2 way to run" />
+    <MESSAGE value="Merge remote-tracking branch 'remotes/origin/crucialChanges'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/production/ATSP/ATSP.class&#10;#&#9;out/production/ATSP/AtspGreedy.class&#10;#&#9;out/production/ATSP/AtspRandom.class&#10;#&#9;out/production/ATSP/Main.class" />
+    <MESSAGE value="AtspSimulatedAnnealing&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/production/ATSP/ATSP.class&#10;#&#9;out/production/ATSP/AtspGreedy.class&#10;#&#9;out/production/ATSP/AtspRandom.class&#10;#&#9;out/production/ATSP/Main.class" />
+    <option name="LAST_COMMIT_MESSAGE" value="AtspSimulatedAnnealing&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/production/ATSP/ATSP.class&#10;#&#9;out/production/ATSP/AtspGreedy.class&#10;#&#9;out/production/ATSP/AtspRandom.class&#10;#&#9;out/production/ATSP/Main.class" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test2/rbg358.atsp" />
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/greedy_general_ft53.txt" />
+    <entry file="file://$PROJECT_DIR$/greedy_time_ft53.txt" />
+    <entry file="file://$PROJECT_DIR$/greedy_time_p43.txt" />
+    <entry file="file://$PROJECT_DIR$/greedy_general_p43.txt" />
+    <entry file="file://$PROJECT_DIR$/src/TSPRandom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TSPSteepest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TSPSimpleHeuristic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solutions/tabu/general_ft53.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solutions/tabu/multi_1_rbg358.txt" />
+    <entry file="file://$PROJECT_DIR$/solutions/simulated/multi_1_rbg358.txt" />
+    <entry file="file://$PROJECT_DIR$/src/TSPTabu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2125">
+          <caret line="128" column="16" selection-start-line="128" selection-start-column="16" selection-end-line="128" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solutions/bests.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TSPSimulatedAnnealing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2261">
+          <caret line="134" column="9" lean-forward="true" selection-start-line="134" selection-start-column="9" selection-end-line="134" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TSP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="94" column="70" lean-forward="true" selection-start-line="94" selection-start-column="70" selection-end-line="94" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TSPGreedy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding>
+            <element signature="e#119#120#0" expanded="true" />
+            <element signature="e#169#170#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>ATSP:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>jackson-all-1.9.9</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>ATSP</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
