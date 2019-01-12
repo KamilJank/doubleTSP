@@ -97,7 +97,6 @@ public abstract class TSP {
         currentSolution[firstElement] = currentSolution[secondElement];
         currentSolution[secondElement] = help;
     }
-
     public void solve() {
         int minL = 10;
         double l = 0;
@@ -143,7 +142,7 @@ public abstract class TSP {
             System.out.println(Arrays.toString(solutionsPermutation.get(i)) + ";" + solutionsCost.get(i));
         }*/
     }
-
+/*
     public void solveTimeOnly() {
         int minL = 10;
         double l = 0;
@@ -162,9 +161,9 @@ public abstract class TSP {
             e.printStackTrace();
         }
         /*System.out.println(name);
-        System.out.println(avgTime);*/
+        System.out.println(avgTime);
     }
-
+*/
     public void multisolveWithMileagePrints(int times) {
         //System.out.println(name);
         try {
