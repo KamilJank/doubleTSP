@@ -6,10 +6,17 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac49ee5c-6821-4350-ae9a-361ffc53ae12" name="Default Changelist" comment="AtspSimulatedAnnealing&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/production/ATSP/ATSP.class&#10;#&#9;out/production/ATSP/AtspGreedy.class&#10;#&#9;out/production/ATSP/AtspRandom.class&#10;#&#9;out/production/ATSP/Main.class">
-      <change afterPath="$PROJECT_DIR$/src/TSPFile.java" afterDir="false" />
+    <list default="true" id="ac49ee5c-6821-4350-ae9a-361ffc53ae12" name="Default Changelist" comment="Iterate Greedy and refactor rest&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/production/ATSP/ATSP.class&#10;#&#9;out/production/ATSP/AtspGreedy.class&#10;#&#9;out/production/ATSP/AtspRandom.class&#10;#&#9;out/production/ATSP/Main.class">
+      <change afterPath="$PROJECT_DIR$/src/TSPIterateGreedy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TSP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TSP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TSPFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TSPFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TSPGreedy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TSPGreedy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TSPRandom.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TSPSimpleHeuristic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TSPSimulatedAnnealing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TSPSteepest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TSPTabu.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,28 +80,30 @@
         <counts>
           <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="279" />
+          <entry key="java" value="1032" />
+          <entry key="txt" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="279" />
+          <entry key="JAVA" value="1032" />
+          <entry key="PLAIN_TEXT" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="1" />
+          <entry key="java" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="1" />
+          <entry key="JAVA" value="6" />
         </counts>
       </usages-collector>
     </session>
@@ -135,23 +144,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/TSP.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1462">
-              <caret line="94" column="70" selection-start-line="94" selection-start-column="70" selection-end-line="94" selection-end-column="70" />
+            <state relative-caret-position="187">
+              <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -162,35 +159,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TSPGreedy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="64" selection-start-line="11" selection-start-column="21" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="289">
+              <caret line="17" column="48" lean-forward="true" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TSPSimulatedAnnealing.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/TSPIterateGreedy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TSPSimpleHeuristic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/kroA100.tsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="106" column="3" lean-forward="true" selection-start-line="106" selection-end-line="107" />
+            <state relative-caret-position="357">
+              <caret line="21" column="45" lean-forward="true" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -199,27 +178,24 @@
         <entry file="file://$PROJECT_DIR$/src/TSPFile.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="62" column="38" lean-forward="true" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
+              <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2182#2183#0" expanded="true" />
-                <element signature="e#2217#2218#0" expanded="true" />
-                <element signature="e#2258#2259#0" expanded="true" />
-                <element signature="e#2291#2292#0" expanded="true" />
-                <element signature="e#2327#2328#0" expanded="true" />
-                <element signature="e#2359#2360#0" expanded="true" />
-                <element signature="e#2390#2391#0" expanded="true" />
-                <element signature="e#2417#2418#0" expanded="true" />
+                <element signature="e#2712#2713#0" expanded="true" />
+                <element signature="e#2774#2775#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/kroA150.tsp">
+        <entry file="file://$PROJECT_DIR$/src/TSP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+            <state relative-caret-position="-139">
+              <caret line="172" column="21" selection-start-line="172" selection-start-column="17" selection-end-line="172" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -235,10 +211,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>0</find>
-      <find>infi</find>
-      <find>infini</find>
-      <find>System</find>
       <find>sysł</find>
       <find>readAllFiles</find>
       <find>random()</find>
@@ -247,7 +219,6 @@
       <find>round</find>
       <find>println</find>
       <find>print</find>
-      <find>evaluatedSolutions</find>
       <find>bestSolution</find>
       <find>inf</find>
       <find>INF</find>
@@ -255,7 +226,6 @@
       <find>calculateCostCha</find>
       <find>calculatecostC</find>
       <find>random</find>
-      <find>generateRandomPermutations</find>
       <find>calculateCostChangeOnSwap</find>
       <find>iterations</find>
       <find>getNextResult</find>
@@ -265,6 +235,12 @@
       <find>halfSize*secondElementListIndex</find>
       <find>(halfSize*secondElementListIndex))</find>
       <find>todo</find>
+      <find>fileWriter</find>
+      <find>evaluatedSolutions</find>
+      <find>getArcCost</find>
+      <find>argMinWithoutRepetition</find>
+      <find>generateRandomPermutations</find>
+      <find>eval</find>
     </findStrings>
     <replaceStrings>
       <replace>currentSolution</replace>
@@ -292,11 +268,13 @@
         <option value="$PROJECT_DIR$/src/AtspTabu.java" />
         <option value="$PROJECT_DIR$/src/AtspSimulatedAnnealing.java" />
         <option value="$PROJECT_DIR$/src/TSPSimulatedAnnealing.java" />
-        <option value="$PROJECT_DIR$/src/TSP.java" />
         <option value="$PROJECT_DIR$/data/kroA100.tsp" />
-        <option value="$PROJECT_DIR$/src/TSPFile.java" />
         <option value="$PROJECT_DIR$/src/OldMain.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/TSPFile.java" />
+        <option value="$PROJECT_DIR$/src/TSP.java" />
+        <option value="$PROJECT_DIR$/src/TSPGreedy.java" />
+        <option value="$PROJECT_DIR$/src/TSPIterateGreedy.java" />
       </list>
     </option>
   </component>
@@ -317,33 +295,29 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="doubleTSP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doubleTSP" type="462c0819:PsiDirectoryNode" />
+              <item name="TSP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSP" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="doubleTSP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doubleTSP" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doubleTSP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doubleTSP" type="462c0819:PsiDirectoryNode" />
+              <item name="TSP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSP" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547233640316" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547329515922" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -441,10 +415,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22121535" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.22416107" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -452,16 +425,16 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4978678" visible="true" weight="0.3281412" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4978678" weight="0.3281412" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48880598" weight="0.3271028" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4986577" weight="0.32907802" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49731544" weight="0.32907802" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5021322" side_tool="true" visible="true" weight="0.3281412" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5021322" side_tool="true" weight="0.32765958" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49463087" weight="0.32765958" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49573562" weight="0.3281412" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" sideWeight="0.49573562" visible="true" weight="0.32765958" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -472,7 +445,7 @@
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.32995737" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24496645" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22416107" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -480,16 +453,16 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4978678" weight="0.3281412" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48880598" weight="0.3271028" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32907802" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32907802" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4986577" weight="0.32907802" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49731544" weight="0.32907802" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5021322" side_tool="true" weight="0.32765958" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49463087" weight="0.32765958" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49573562" weight="0.3281412" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -497,7 +470,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32995737" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -534,7 +507,8 @@
     <MESSAGE value="2 way to run" />
     <MESSAGE value="Merge remote-tracking branch 'remotes/origin/crucialChanges'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/production/ATSP/ATSP.class&#10;#&#9;out/production/ATSP/AtspGreedy.class&#10;#&#9;out/production/ATSP/AtspRandom.class&#10;#&#9;out/production/ATSP/Main.class" />
     <MESSAGE value="AtspSimulatedAnnealing&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/production/ATSP/ATSP.class&#10;#&#9;out/production/ATSP/AtspGreedy.class&#10;#&#9;out/production/ATSP/AtspRandom.class&#10;#&#9;out/production/ATSP/Main.class" />
-    <option name="LAST_COMMIT_MESSAGE" value="AtspSimulatedAnnealing&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/production/ATSP/ATSP.class&#10;#&#9;out/production/ATSP/AtspGreedy.class&#10;#&#9;out/production/ATSP/AtspRandom.class&#10;#&#9;out/production/ATSP/Main.class" />
+    <MESSAGE value="Iterate Greedy and refactor rest&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/production/ATSP/ATSP.class&#10;#&#9;out/production/ATSP/AtspGreedy.class&#10;#&#9;out/production/ATSP/AtspRandom.class&#10;#&#9;out/production/ATSP/Main.class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Iterate Greedy and refactor rest&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/production/ATSP/ATSP.class&#10;#&#9;out/production/ATSP/AtspGreedy.class&#10;#&#9;out/production/ATSP/AtspRandom.class&#10;#&#9;out/production/ATSP/Main.class" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test2/rbg358.atsp" />
@@ -563,38 +537,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TSPSimpleHeuristic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/solutions/tabu/general_ft53.txt" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/String.java" />
     <entry file="file://$PROJECT_DIR$/solutions/tabu/multi_1_rbg358.txt" />
     <entry file="file://$PROJECT_DIR$/solutions/simulated/multi_1_rbg358.txt" />
     <entry file="file://$PROJECT_DIR$/solutions/bests.txt" />
-    <entry file="file://$PROJECT_DIR$/src/TSP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1462">
-          <caret line="94" column="70" selection-start-line="94" selection-start-column="70" selection-end-line="94" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TSPSimulatedAnnealing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TSPTabu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -602,20 +549,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/TSPFile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TSPGreedy.java">
+    <entry file="file://$PROJECT_DIR$/data/TSPFile" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/function/Consumer.java" />
+    <entry file="file://$PROJECT_DIR$/src/OldMain.java" />
+    <entry file="file://$PROJECT_DIR$/src/TSPSimulatedAnnealing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="64" selection-start-line="11" selection-start-column="21" selection-end-line="33" selection-end-column="5" />
+        <state relative-caret-position="561">
+          <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/function/Consumer.java">
+    <entry file="file://$PROJECT_DIR$/data/kroA100.tsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        <state relative-caret-position="1802">
+          <caret line="106" column="3" selection-start-line="106" selection-end-line="107" />
         </state>
       </provider>
     </entry>
@@ -626,48 +573,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/kroA100.tsp">
+    <entry file="file://$PROJECT_DIR$/src/TSPSimpleHeuristic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="106" column="3" lean-forward="true" selection-start-line="106" selection-end-line="107" />
+        <state relative-caret-position="235">
+          <caret line="37" column="26" lean-forward="true" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TSPFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="62" column="38" lean-forward="true" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
+          <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2182#2183#0" expanded="true" />
-            <element signature="e#2217#2218#0" expanded="true" />
-            <element signature="e#2258#2259#0" expanded="true" />
-            <element signature="e#2291#2292#0" expanded="true" />
-            <element signature="e#2327#2328#0" expanded="true" />
-            <element signature="e#2359#2360#0" expanded="true" />
-            <element signature="e#2390#2391#0" expanded="true" />
-            <element signature="e#2417#2418#0" expanded="true" />
+            <element signature="e#2712#2713#0" expanded="true" />
+            <element signature="e#2774#2775#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OldMain.java">
+    <entry file="file://$PROJECT_DIR$/src/TSP.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3179">
-          <caret line="188" lean-forward="true" selection-start-line="188" selection-end-line="188" />
+        <state relative-caret-position="-139">
+          <caret line="172" column="21" selection-start-line="172" selection-start-column="17" selection-end-line="172" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/TSPGreedy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="289">
+          <caret line="17" column="48" lean-forward="true" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TSPIterateGreedy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="45" lean-forward="true" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
         </state>
       </provider>
     </entry>

@@ -2,46 +2,118 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Random;
-
-import static jdk.nashorn.internal.objects.NativeMath.round;
 
 public abstract class TSP {
     protected int size;
     protected int halfSize;
-    private String name;
     private double avgTime;
     private double avgSolution;
     protected Double currentSolutionCost;
     protected int currentSolution[];
-    protected Double firstSolutionCost;
-    protected int firstSolution[];
-    protected Double matrix[][];
-    protected long iterations;
-    protected long evaluatedSolutions;
-
     protected Double bestSolutionCost;
     protected int bestSolution[];
-    BufferedWriter fileWriter;
-    protected long minTime;
+    protected Double worstSolutionCost;
+    protected int worstSolution[];
+    private BufferedWriter fileWriter;
+    private final TSPFile problemInstance;
+    protected String firstSolutionMethod;
 
-    public TSP(String name, int size, Double matrix[][], String fileName) {
-        this.name = name;
-        this.size = size;
-        this.halfSize = size / 2;
-        this.matrix = matrix;
+    public TSP(TSPFile data, String firstSolutionMethod, String fileName) {
+        problemInstance = data;
+        this.firstSolutionMethod = firstSolutionMethod;
+        size = problemInstance.getDimension();
+        halfSize = size / 2;
         currentSolution = new int[size];
-        firstSolution = new int[size];
+        worstSolution = new int[size];
         bestSolution = new int[size];
         bestSolutionCost = Double.POSITIVE_INFINITY;
-        minTime = 1000000000;//1 second
+        worstSolutionCost = Double.NEGATIVE_INFINITY;
         try {
-            fileWriter = new BufferedWriter(new FileWriter(fileName + name + ".txt"));
+            fileWriter = new BufferedWriter(new FileWriter(fileName + problemInstance.getName() + ".txt"));
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    protected int[] getFirstSolution(int permutation[]) {
+        switch (firstSolutionMethod.toLowerCase()) {
+            case "random":
+                return generateRandomPermutations(permutation);
+            case "heuristic1":
+                return heuristicFirstSolution1(permutation);
+            case "heuristic2":
+                return heuristicFirstSolution2(permutation);
+            default:
+                return generateRandomPermutations(permutation);
+        }
+    }
+
+    protected int[] heuristicFirstSolution1(int permutation[]) {
+        boolean[] choosedElements = new boolean[size];
+        Random generator = new Random();
+        int currentNode = generator.nextInt(size);
+        permutation[0] = currentNode;
+        choosedElements[currentNode] = true;
+
+        for (int i = 1; i < size; i++) {
+            currentNode = argMinWithoutRepetition(currentNode, choosedElements);
+            choosedElements[currentNode] = true;
+            permutation[i] = currentNode;
+        }
+        return permutation;
+    }
+
+    protected int[] heuristicFirstSolution2(int permutation[]) {
+        boolean[] choosedElements = new boolean[size];
+        Random generator = new Random();
+
+        int firstListNode = generator.nextInt(size);
+        permutation[0] = firstListNode;
+        choosedElements[firstListNode] = true;
+
+        int secondListNode = argMaxArcLength(firstListNode);
+        permutation[halfSize] = secondListNode;
+        choosedElements[secondListNode] = true;
+
+        for (int i = 1; i < halfSize; i++) {
+            firstListNode = argMinWithoutRepetition(firstListNode, choosedElements);
+            choosedElements[firstListNode] = true;
+            permutation[i] = firstListNode;
+
+            secondListNode = argMinWithoutRepetition(secondListNode, choosedElements);
+            choosedElements[secondListNode] = true;
+            permutation[halfSize + i] = secondListNode;
+        }
+        return permutation;
+    }
+
+    private int argMaxArcLength(int node) {
+        Double max = Double.NEGATIVE_INFINITY;
+        int argmax = -1;
+        for (int i = 0; i < size; i++) {
+            if (i != node) {
+                Double newMax = problemInstance.getArcCost(node, i);
+                if (newMax > max) {
+                    max = newMax;
+                    argmax = i;
+                }
+            }
+        }
+        return argmax;
+    }
+
+    private int argMinWithoutRepetition(int node, boolean choosedElements[]) {
+        Double min = Double.POSITIVE_INFINITY;
+        int argmin = -1;
+        for (int i = 0; i < size; i++) {
+            Double newMin = problemInstance.getArcCost(node, i);
+            if (newMin < min && !choosedElements[i]) {
+                min = newMin;
+                argmin = i;
+            }
+        }
+        return argmin;
     }
 
     protected int[] generateRandomPermutations(int permutation[]) {
@@ -61,7 +133,7 @@ public abstract class TSP {
     }
 
     protected Double getArcCost(int solution[], int firstElement, int secondElement) {
-        return matrix[solution[firstElement]][solution[secondElement]];
+        return problemInstance.getArcCost(solution[firstElement], solution[secondElement]);
     }
 
     protected Double calculateCost(int solution[]) {
@@ -97,100 +169,64 @@ public abstract class TSP {
         currentSolution[firstElement] = currentSolution[secondElement];
         currentSolution[secondElement] = help;
     }
-    public void solve() {
-        int minL = 10;
+
+    private void evaluateCurrentSolution() {
+        if (bestSolutionCost > currentSolutionCost) {
+            bestSolutionCost = currentSolutionCost;
+            bestSolution = currentSolution.clone();
+        }
+        if (worstSolutionCost < currentSolutionCost) {
+            worstSolutionCost = currentSolutionCost;
+            worstSolution = currentSolution.clone();
+        }
+    }
+
+
+    public void solve(int startsNumber) {
         double l = 0;
         long sumOfSolutions = 0;
         long estimatedTime = 0;
-        long sumIterations = 0;
-        long sumOfEvaluatedSolutions = 0;
-        List<Double> solutionsCost = new LinkedList<>();
-        List<int[]> solutionsPermutation = new LinkedList<>();
         do {
             long startTime = System.nanoTime();
             algorithm();
             estimatedTime += System.nanoTime() - startTime;
-            solutionsCost.add(currentSolutionCost);
-            solutionsPermutation.add(currentSolution.clone());
+            evaluateCurrentSolution();
             sumOfSolutions += currentSolutionCost;
-            sumIterations += iterations;
-            sumOfEvaluatedSolutions += evaluatedSolutions;
-            if (bestSolutionCost > currentSolutionCost) {
-                bestSolutionCost = currentSolutionCost;
-                bestSolution = currentSolution.clone();
-            }
             l++;
-        } while (l < minL || estimatedTime < minTime);
+        } while (l < startsNumber);
 
         avgTime = estimatedTime / l;
         avgSolution = sumOfSolutions / l;
         try {
-            fileWriter.write(name + "\n");
-            fileWriter.write(Arrays.toString(bestSolution) + ";" + bestSolutionCost + ";" + avgSolution + ";" + avgTime
-                    + ";" + round(2, sumIterations / (double) l) + ";" + round(2, sumOfEvaluatedSolutions / (double) l) + ";" + l + "\n");
-            for (int i = 0; i < solutionsCost.size(); i++) {
-                fileWriter.write(Arrays.toString(solutionsPermutation.get(i)) + ";" + solutionsCost.get(i) + "\n");
-            }
+            fileWriter.write(problemInstance.getName() + "\n");
+            fileWriter.write(Arrays.toString(bestSolution) + ";" + bestSolutionCost +
+                    Arrays.toString(worstSolution) + ";" + worstSolutionCost +
+                    ";" + avgSolution + ";" + avgTime);
             fileWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        /*System.out.println(name);
-        System.out.println(Arrays.toString(bestSolution) + ";" + bestSolutionCost + ";" + avgSolution + ";" + avgTime
-                + ";" + round(2,sumIterations / l) + ";" +  round(2,sumOfEvaluatedSolutions / l) + ";" + l);
-        for (int i = 0; i < solutionsCost.size(); i++) {
-            System.out.println(Arrays.toString(solutionsPermutation.get(i)) + ";" + solutionsCost.get(i));
-        }*/
     }
-/*
-    public void solveTimeOnly() {
-        int minL = 10;
-        double l = 0;
-        long startTime = System.nanoTime();
-        do {
-            algorithm();
-            l++;
-        } while (l < minL || System.nanoTime() - startTime < minTime);
-        long estimatedTime = System.nanoTime() - startTime;
-        avgTime = estimatedTime / l;
-        try {
-            fileWriter.write(name + "\n");
-            fileWriter.write(avgTime + "\n");
-            fileWriter.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        /*System.out.println(name);
-        System.out.println(avgTime);
-    }
-*/
+
     public void multisolveWithMileagePrints(int times) {
-        //System.out.println(name);
         try {
-            fileWriter.write(name + "\n");
+            fileWriter.write(problemInstance.getName() + "\n");
         } catch (IOException e) {
             e.printStackTrace();
         }
         for (int i = 0; i < times; i++) {
             algorithm();
-            if (bestSolutionCost > currentSolutionCost) {
-                bestSolutionCost = currentSolutionCost;
-                bestSolution = currentSolution.clone();
-            }
             try {
-                fileWriter.write(firstSolutionCost + ";" + Arrays.toString(currentSolution) + ";" + currentSolutionCost + "\n");
+                fileWriter.write(Arrays.toString(currentSolution) + ";" + currentSolutionCost + "\n");
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            //System.out.println(firstSolutionCost + ";" + Arrays.toString(currentSolution) + ";" + currentSolutionCost);
         }
         try {
-            fileWriter.write(bestSolutionCost + ";" + Arrays.toString(bestSolution) + "\n");
             fileWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //System.out.println(Arrays.toString(bestSolution) + ";" + bestSolutionCost);
     }
 
     abstract void algorithm();

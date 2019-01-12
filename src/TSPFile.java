@@ -75,4 +75,8 @@ public class TSPFile {
     public String getName() {
         return name;
     }
+
+    public Double getArcCost(int firstElement, int secondElement) {
+        return distMatrix[firstElement][secondElement];
+    }
 }
