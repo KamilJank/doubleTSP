@@ -147,13 +147,26 @@ public abstract class TSP {
     }
 
     protected Double calculateCostChangeOnSwap(int firstElement, int secondElement) {
-        //TODO if |i-j|==1 or size-1 to nie robic srodkowych czesci (bo zamiana dwuch sąsiednich miedzy nimi nic nie zmienia
         int firstElementListIndex = firstElement / halfSize;
         int secondElementListIndex = secondElement / halfSize;
-        int fL=Math.floorMod((firstElement - 1), halfSize) + (halfSize * firstElementListIndex);
-        int fR=((firstElement + 1) % halfSize) + (halfSize * firstElementListIndex);
-        int sL=Math.floorMod((secondElement - 1), halfSize) + (halfSize * secondElementListIndex);
-        int sR=((secondElement + 1) % halfSize) + (halfSize * secondElementListIndex);
+        int fL = Math.floorMod((firstElement - 1), halfSize) + (halfSize * firstElementListIndex);
+        int fR = ((firstElement + 1) % halfSize) + (halfSize * firstElementListIndex);
+        int sL = Math.floorMod((secondElement - 1), halfSize) + (halfSize * secondElementListIndex);
+        int sR = ((secondElement + 1) % halfSize) + (halfSize * secondElementListIndex);
+        if (fL == secondElement) {
+            return 0
+                    - getArcCost(currentSolution.getPermutation(), firstElement, fR)
+                    - getArcCost(currentSolution.getPermutation(), sL, secondElement)
+                    + getArcCost(currentSolution.getPermutation(), secondElement, fR)
+                    + getArcCost(currentSolution.getPermutation(), sL, firstElement);
+        }
+        if (fR == secondElement) {
+            return 0
+                    - getArcCost(currentSolution.getPermutation(), fL, firstElement)
+                    - getArcCost(currentSolution.getPermutation(), secondElement, sR)
+                    + getArcCost(currentSolution.getPermutation(), fL, secondElement)
+                    + getArcCost(currentSolution.getPermutation(), firstElement, sR);
+        }
         return 0
                 - getArcCost(currentSolution.getPermutation(), fL, firstElement)
                 - getArcCost(currentSolution.getPermutation(), firstElement, fR)
