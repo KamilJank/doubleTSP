@@ -1,7 +1,6 @@
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Random;
 
 public abstract class TSP {
@@ -9,12 +8,10 @@ public abstract class TSP {
     protected int halfSize;
     private double avgTime;
     private double avgSolution;
-    protected Double currentSolutionCost;
-    protected int currentSolution[];
-    protected Double bestSolutionCost;
-    protected int bestSolution[];
-    protected Double worstSolutionCost;
-    protected int worstSolution[];
+
+    Solution currentSolution;
+    Solution worstSolution;
+    Solution bestSolution;
     private BufferedWriter fileWriter;
     private final TSPFile problemInstance;
     protected String firstSolutionMethod;
@@ -24,11 +21,9 @@ public abstract class TSP {
         this.firstSolutionMethod = firstSolutionMethod;
         size = problemInstance.getDimension();
         halfSize = size / 2;
-        currentSolution = new int[size];
-        worstSolution = new int[size];
-        bestSolution = new int[size];
-        bestSolutionCost = Double.POSITIVE_INFINITY;
-        worstSolutionCost = Double.NEGATIVE_INFINITY;
+        currentSolution = new Solution(size);
+        worstSolution = new Solution(size, Double.NEGATIVE_INFINITY);
+        bestSolution = new Solution(size);
         try {
             fileWriter = new BufferedWriter(new FileWriter(fileName + problemInstance.getName() + ".txt"));
         } catch (IOException e) {
@@ -36,7 +31,8 @@ public abstract class TSP {
         }
     }
 
-    protected int[] getFirstSolution(int permutation[]) {
+    protected int[] getFirstSolution() {
+        int[] permutation = new int[size];
         switch (firstSolutionMethod.toLowerCase()) {
             case "random":
                 return generateRandomPermutations(permutation);
@@ -151,33 +147,30 @@ public abstract class TSP {
     }
 
     protected Double calculateCostChangeOnSwap(int firstElement, int secondElement) {
+        //TODO if |i-j|==1 or size-1 to nie robic srodkowych czesci (bo zamiana dwuch sąsiednich miedzy nimi nic nie zmienia
         int firstElementListIndex = firstElement / halfSize;
         int secondElementListIndex = secondElement / halfSize;
+        int fL=Math.floorMod((firstElement - 1), halfSize) + (halfSize * firstElementListIndex);
+        int fR=((firstElement + 1) % halfSize) + (halfSize * firstElementListIndex);
+        int sL=Math.floorMod((secondElement - 1), halfSize) + (halfSize * secondElementListIndex);
+        int sR=((secondElement + 1) % halfSize) + (halfSize * secondElementListIndex);
         return 0
-                - getArcCost(currentSolution, Math.floorMod((firstElement - 1), halfSize) + (halfSize * firstElementListIndex), firstElement)
-                - getArcCost(currentSolution, firstElement, (firstElement + 1) % halfSize) + (halfSize * firstElementListIndex)
-                - getArcCost(currentSolution, Math.floorMod((secondElement - 1), halfSize) + (halfSize * secondElementListIndex), secondElement)
-                - getArcCost(currentSolution, secondElement, (secondElement + 1) % halfSize) + (halfSize * secondElementListIndex)
-                + getArcCost(currentSolution, Math.floorMod((firstElement - 1), halfSize) + (halfSize * firstElementListIndex), secondElement)
-                + getArcCost(currentSolution, secondElement, (firstElement + 1) % halfSize) + (halfSize * firstElementListIndex)
-                + getArcCost(currentSolution, Math.floorMod((secondElement - 1), halfSize) + (halfSize * secondElementListIndex), firstElement)
-                + getArcCost(currentSolution, firstElement, (secondElement + 1) % halfSize) + (halfSize * secondElementListIndex);
-    }
-
-    protected void swapElements(int firstElement, int secondElement) {
-        int help = currentSolution[firstElement];
-        currentSolution[firstElement] = currentSolution[secondElement];
-        currentSolution[secondElement] = help;
+                - getArcCost(currentSolution.getPermutation(), fL, firstElement)
+                - getArcCost(currentSolution.getPermutation(), firstElement, fR)
+                - getArcCost(currentSolution.getPermutation(), sL, secondElement)
+                - getArcCost(currentSolution.getPermutation(), secondElement, sR)
+                + getArcCost(currentSolution.getPermutation(), fL, secondElement)
+                + getArcCost(currentSolution.getPermutation(), secondElement, fR)
+                + getArcCost(currentSolution.getPermutation(), sL, firstElement)
+                + getArcCost(currentSolution.getPermutation(), firstElement, sR);
     }
 
     private void evaluateCurrentSolution() {
-        if (bestSolutionCost > currentSolutionCost) {
-            bestSolutionCost = currentSolutionCost;
-            bestSolution = currentSolution.clone();
+        if (bestSolution.getCost() > currentSolution.getCost()) {
+            bestSolution.cloneSolution(currentSolution);
         }
-        if (worstSolutionCost < currentSolutionCost) {
-            worstSolutionCost = currentSolutionCost;
-            worstSolution = currentSolution.clone();
+        if (worstSolution.getCost() < currentSolution.getCost()) {
+            worstSolution.cloneSolution(currentSolution);
         }
     }
 
@@ -191,7 +184,7 @@ public abstract class TSP {
             algorithm();
             estimatedTime += System.nanoTime() - startTime;
             evaluateCurrentSolution();
-            sumOfSolutions += currentSolutionCost;
+            sumOfSolutions += currentSolution.getCost();
             l++;
         } while (l < startsNumber);
 
@@ -199,9 +192,7 @@ public abstract class TSP {
         avgSolution = sumOfSolutions / l;
         try {
             fileWriter.write(problemInstance.getName() + "\n");
-            fileWriter.write(Arrays.toString(bestSolution) + ";" + bestSolutionCost +
-                    Arrays.toString(worstSolution) + ";" + worstSolutionCost +
-                    ";" + avgSolution + ";" + avgTime);
+            fileWriter.write(bestSolution.toString() + ";" + worstSolution.toString() + ";" + avgSolution + ";" + avgTime);
             fileWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -217,7 +208,7 @@ public abstract class TSP {
         for (int i = 0; i < times; i++) {
             algorithm();
             try {
-                fileWriter.write(Arrays.toString(currentSolution) + ";" + currentSolutionCost + "\n");
+                fileWriter.write(currentSolution.toString() + "\n");
             } catch (IOException e) {
                 e.printStackTrace();
             }

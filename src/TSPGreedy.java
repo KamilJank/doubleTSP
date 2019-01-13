@@ -1,16 +1,21 @@
 public class TSPGreedy extends TSP {
-    public TSPGreedy(TSPFile data,String firstSolutionMethod, String fileName) {
-        super(data,firstSolutionMethod,fileName);
+    public TSPGreedy(TSPFile data, String firstSolutionMethod, String fileName) {
+        super(data, firstSolutionMethod, fileName);
     }
 
     @Override
     void algorithm() {
-        currentSolution=getFirstSolution(currentSolution);
+        currentSolution.setPermutation(getFirstSolution());
+        currentSolution.setCost(calculateCost(currentSolution.getPermutation()));
+        getSolution();
+    }
+
+    protected void getSolution() {
         Double costChange;
         do {
             costChange = getNextResult();
-        } while (costChange<0);
-        currentSolutionCost = calculateCost(currentSolution);
+            currentSolution.addCost(costChange);
+        } while (costChange < 0);
     }
 
     protected Double getNextResult() {
@@ -18,7 +23,7 @@ public class TSPGreedy extends TSP {
             for (int j = i + 1; j < size; j++) {
                 Double costChange = calculateCostChangeOnSwap(i, j);
                 if (costChange < 0) {
-                    swapElements(i, j);
+                    currentSolution.swapElements(i, j);
                     return costChange;
                 }
             }

@@ -1,42 +1,50 @@
+import java.util.Random;
+
 public class TSPIterateGreedy extends TSPGreedy {
     public TSPIterateGreedy(TSPFile data, String firstSolutionMethod, long calculationTime, String fileName) {
         super(data, firstSolutionMethod, fileName);
-        bestIterationSolution = new int[size];
+        bestIterationSolution = new Solution(size);
         this.calculationTime = calculationTime;
+        generator = new Random();
     }
-
-    private Double bestIterationSolutionCost;
-    private int bestIterationSolution[];
+    private Solution bestIterationSolution;
     private long calculationTime;
+    private Random generator;
 
     @Override
     void algorithm() {
-        currentSolution = getFirstSolution(currentSolution);
-        bestIterationSolution = currentSolution.clone();
-        currentSolutionCost = calculateCost(currentSolution);
-        bestIterationSolutionCost = currentSolutionCost;
+        currentSolution.setPermutation(getFirstSolution());
+        currentSolution.setCost(calculateCost(currentSolution.getPermutation()));
+        getSolution();
+        bestIterationSolution.cloneSolution(currentSolution);
+
         long startTime = System.nanoTime();
         do {
-            Double costChange;
-            do {
-                costChange = getNextResult();
-                currentSolutionCost += costChange;
-            } while (costChange < 0);
-            evaluationAndPerturbation();
+            perturbation();
+            getSolution();
+            evaluation();
         } while (System.nanoTime() - startTime < calculationTime);
-        currentSolutionCost = bestIterationSolutionCost;
-        currentSolution = bestIterationSolution.clone();
     }
 
-    private void evaluationAndPerturbation() {
-        if (currentSolutionCost < bestIterationSolutionCost) {
-            bestIterationSolutionCost = currentSolutionCost;
-            bestIterationSolution = currentSolution.clone();
+    private void evaluation() {
+        if (currentSolution.getCost() < bestIterationSolution.getCost()) {
+            bestIterationSolution.cloneSolution(currentSolution);
+        }else{
+            currentSolution.cloneSolution(bestIterationSolution);
         }
-        perturbation();
     }
 
     private void perturbation() {
-        //TODO
+        int a= generator.nextInt(size);
+        int b= generator.nextInt(size);
+        int c= generator.nextInt(size);
+        System.out.println(a+" "+b+" "+c);
+        System.out.println(currentSolution.toString());
+        Double costChange = calculateCostChangeOnSwap(a, b);
+        currentSolution.swapElements(a,b);
+        costChange += calculateCostChangeOnSwap(b, c);
+        currentSolution.swapElements(b,c);
+        currentSolution.addCost(costChange);
+        System.out.println(currentSolution.toString());
     }
 }
