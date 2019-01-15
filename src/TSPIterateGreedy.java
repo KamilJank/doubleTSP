@@ -15,13 +15,13 @@ public class TSPIterateGreedy extends TSPGreedy {
     void algorithm() {
         currentSolution.setPermutation(getFirstSolution());
         currentSolution.setCost(calculateCost(currentSolution.getPermutation()));
-        getSolution();
+        getSolution(currentSolution);
         bestIterationSolution.cloneSolution(currentSolution);
 
         long startTime = System.nanoTime();
         do {
             perturbation();
-            getSolution();
+            getSolution(currentSolution);
             evaluation();
         } while (System.nanoTime() - startTime < calculationTime);
     }
@@ -40,9 +40,9 @@ public class TSPIterateGreedy extends TSPGreedy {
         int c= generator.nextInt(size);
         System.out.println(a+" "+b+" "+c);
         System.out.println(currentSolution.toString());
-        Double costChange = calculateCostChangeOnSwap(a, b);
+        Double costChange = calculateCostChangeOnSwap(currentSolution.getPermutation(),a, b);
         currentSolution.swapElements(a,b);
-        costChange += calculateCostChangeOnSwap(b, c);
+        costChange += calculateCostChangeOnSwap(currentSolution.getPermutation(),b, c);
         currentSolution.swapElements(b,c);
         currentSolution.addCost(costChange);
         System.out.println(currentSolution.toString());

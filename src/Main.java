@@ -27,7 +27,7 @@ public class Main {
             System.out.println(Arrays.toString(li));
         }*/
         System.out.println("AFTER read");
-        TSPGreedy greedy=new TSPGreedy(tspFileList.get(0),"random","test1_g_r");
-        greedy.solve(10);
+        TSPHybridAlgorithm greedy=new TSPHybridAlgorithm(tspFileList.get(0),"random","1test1_g_r");
+        greedy.solve(1);
     }
 }

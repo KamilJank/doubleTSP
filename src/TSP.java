@@ -146,7 +146,7 @@ public abstract class TSP {
         return sumOfSolutions;
     }
 
-    protected Double calculateCostChangeOnSwap(int firstElement, int secondElement) {
+    protected Double calculateCostChangeOnSwap(int[] permutation,int firstElement, int secondElement) {
         int firstElementListIndex = firstElement / halfSize;
         int secondElementListIndex = secondElement / halfSize;
         int fL = Math.floorMod((firstElement - 1), halfSize) + (halfSize * firstElementListIndex);
@@ -155,27 +155,27 @@ public abstract class TSP {
         int sR = ((secondElement + 1) % halfSize) + (halfSize * secondElementListIndex);
         if (fL == secondElement) {
             return 0
-                    - getArcCost(currentSolution.getPermutation(), firstElement, fR)
-                    - getArcCost(currentSolution.getPermutation(), sL, secondElement)
-                    + getArcCost(currentSolution.getPermutation(), secondElement, fR)
-                    + getArcCost(currentSolution.getPermutation(), sL, firstElement);
+                    - getArcCost(permutation, firstElement, fR)
+                    - getArcCost(permutation, sL, secondElement)
+                    + getArcCost(permutation, secondElement, fR)
+                    + getArcCost(permutation, sL, firstElement);
         }
         if (fR == secondElement) {
             return 0
-                    - getArcCost(currentSolution.getPermutation(), fL, firstElement)
-                    - getArcCost(currentSolution.getPermutation(), secondElement, sR)
-                    + getArcCost(currentSolution.getPermutation(), fL, secondElement)
-                    + getArcCost(currentSolution.getPermutation(), firstElement, sR);
+                    - getArcCost(permutation, fL, firstElement)
+                    - getArcCost(permutation, secondElement, sR)
+                    + getArcCost(permutation, fL, secondElement)
+                    + getArcCost(permutation, firstElement, sR);
         }
         return 0
-                - getArcCost(currentSolution.getPermutation(), fL, firstElement)
-                - getArcCost(currentSolution.getPermutation(), firstElement, fR)
-                - getArcCost(currentSolution.getPermutation(), sL, secondElement)
-                - getArcCost(currentSolution.getPermutation(), secondElement, sR)
-                + getArcCost(currentSolution.getPermutation(), fL, secondElement)
-                + getArcCost(currentSolution.getPermutation(), secondElement, fR)
-                + getArcCost(currentSolution.getPermutation(), sL, firstElement)
-                + getArcCost(currentSolution.getPermutation(), firstElement, sR);
+                - getArcCost(permutation, fL, firstElement)
+                - getArcCost(permutation, firstElement, fR)
+                - getArcCost(permutation, sL, secondElement)
+                - getArcCost(permutation, secondElement, sR)
+                + getArcCost(permutation, fL, secondElement)
+                + getArcCost(permutation, secondElement, fR)
+                + getArcCost(permutation, sL, firstElement)
+                + getArcCost(permutation, firstElement, sR);
     }
 
     private void evaluateCurrentSolution() {

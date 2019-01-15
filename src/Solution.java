@@ -15,6 +15,10 @@ public class Solution {
         permutation = solution.permutation.clone();
         cost = solution.cost;
     }
+    Solution(int[] permutation){
+        this.permutation = permutation.clone();
+        cost = Double.POSITIVE_INFINITY;
+    }
     public void cloneSolution(Solution solution){
         permutation = solution.permutation.clone();
         cost = solution.cost;
@@ -41,5 +45,14 @@ public class Solution {
     }
     public void setPermutation(int[] permutation){
         this.permutation=permutation.clone();
+    }
+    public boolean equals(Solution sol){
+        if(this.cost.equals(sol.cost)){
+            if(this.permutation.equals(sol.permutation)){
+                //TODO do it better because it is cycle
+                return true;
+            }
+        }
+        return false;
     }
 }
