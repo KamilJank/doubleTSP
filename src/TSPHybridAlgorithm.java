@@ -21,7 +21,7 @@ public class TSPHybridAlgorithm extends TSPGreedy{
     void algorithm() {
         generateRandomPopulation();
        boolean stopCondition=false;
-       int i=11;
+       int i=0;
         do {
             Solution s=recombination();
             localSearch(s);
@@ -47,7 +47,7 @@ public class TSPHybridAlgorithm extends TSPGreedy{
         Solution parentB=population.get(generator.nextInt(populationSize));
         System.out.println( "PAIRS");
         //SORT list
-        for(Integer[] i:parentA.getAllCommonSubgraphs(parentA)){
+        for(Integer[] i:parentA.getAllCommonSubgraphs(parentB)){
             System.out.println( Arrays.toString(i));
         }
         //TODO

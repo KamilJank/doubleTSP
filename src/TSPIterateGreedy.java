@@ -38,8 +38,6 @@ public class TSPIterateGreedy extends TSPGreedy {
         int a= generator.nextInt(size);
         int b= generator.nextInt(size);
         int c= generator.nextInt(size);
-        System.out.println(a+" "+b+" "+c);
-        System.out.println(currentSolution.toString());
         Double costChange = calculateCostChangeOnSwap(currentSolution.getPermutation(),a, b);
         currentSolution.swapElements(a,b);
         costChange += calculateCostChangeOnSwap(currentSolution.getPermutation(),b, c);
