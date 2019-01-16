@@ -5,36 +5,43 @@ import java.util.List;
 public class Solution {
     private Double cost;
     private int permutation[];
+    private List<Integer[]> vertices;
 
     Solution(int size) {
         permutation = new int[size];
         cost = Double.POSITIVE_INFINITY;
+        vertices=null;
     }
 
     Solution(int size, Double cost) {
         permutation = new int[size];
         this.cost = cost;
+        vertices=null;
     }
 
     Solution(Solution solution) {
         permutation = solution.permutation.clone();
         cost = solution.cost;
+        vertices=solution.vertices;
     }
 
     Solution(int[] permutation) {
         this.permutation = permutation.clone();
         cost = Double.POSITIVE_INFINITY;
+        vertices=null;
     }
 
     public void cloneSolution(Solution solution) {
         permutation = solution.permutation.clone();
         cost = solution.cost;
+        vertices=solution.vertices;
     }
 
     public void swapElements(int firstElement, int secondElement) {
         int help = permutation[firstElement];
         permutation[firstElement] = permutation[secondElement];
         permutation[secondElement] = help;
+        vertices=null;
     }
 
     public int[] getPermutation() {
@@ -43,6 +50,7 @@ public class Solution {
 
     public void setPermutation(int[] permutation) {
         this.permutation = permutation.clone();
+        vertices=null;
     }
 
     public Double getCost() {
@@ -69,11 +77,11 @@ public class Solution {
         }
         return false;
     }
-    private List<Integer[]> vertices=null;
-    private List<Integer[]> getVerticesPairs(int[] permutationTemp) {
+    private List<Integer[]> getVerticesPairs() {
         if(vertices!=null){
             return vertices;
         }
+        int[] permutationTemp=permutation;
         List<Integer[]> verticesPairs = new ArrayList<>();
         for (int i = 0; i < permutationTemp.length / 2 - 1; i++) {
             Integer[] tempTab = {permutationTemp[i], permutationTemp[i + 1]};
@@ -198,7 +206,7 @@ public class Solution {
     }
 
     public List<Integer[]> getAllCommonSubgraphs(Solution secondSolution) {
-        List<Integer[]> commonVerticesPairs = getCommonEdgesList(getVerticesPairs(this.permutation), getVerticesPairs(secondSolution.getPermutation()));
+        List<Integer[]> commonVerticesPairs = getCommonEdgesList(getVerticesPairs(), secondSolution.getVerticesPairs());
         List<Integer[]> finalList=getFinalEdgesList(commonVerticesPairs);
        List<Integer> vertices = getCommonVerticesList(finalList);
         for (Integer vertex:vertices) {
@@ -209,7 +217,7 @@ public class Solution {
     }
 
     public int calculateSimilarity(Solution secondSolution){
-        List<Integer[]> commonVerticesPairs = getCommonEdgesList(getVerticesPairs(this.permutation), getVerticesPairs(secondSolution.getPermutation()));
+        List<Integer[]> commonVerticesPairs = getCommonEdgesList(getVerticesPairs(), secondSolution.getVerticesPairs());
         return commonVerticesPairs.size();
     }
 
