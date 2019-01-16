@@ -63,8 +63,7 @@ public class Solution {
 
     public boolean equals(Solution sol) {
         if (this.cost.equals(sol.cost)) {
-            if (this.permutation.equals(sol.permutation)) {
-                //TODO do it better because it is cycle
+            if (this.calculateSimilarity(sol)==this.permutation.length) {
                 return true;
             }
         }
@@ -201,9 +200,14 @@ public class Solution {
        List<Integer> vertices = getCommonVerticesList(finalList);
         for (Integer vertex:vertices) {
             Integer[] tempTab={vertex};
-            finalList.add(tempTab);
+            finalList.add(0,tempTab);
         }
         return finalList;
+    }
+
+    public int calculateSimilarity(Solution secondSolution){
+        List<Integer[]> commonVerticesPairs = getCommonEdgesList(getVerticesPairs(this.permutation), getVerticesPairs(secondSolution.getPermutation()));
+        return commonVerticesPairs.size();
     }
 
 
