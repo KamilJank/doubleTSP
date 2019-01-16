@@ -73,7 +73,7 @@ public class Solution {
 
     private List<Integer[]> getVerticesPairs(int[] permutationTemp) {
         List<Integer[]> verticesPairs = new ArrayList<>();
-        for (int i = 0; i < permutationTemp.length / 2 - 2; i++) {
+        for (int i = 0; i < permutationTemp.length / 2 - 1; i++) {
             Integer[] tempTab = {permutationTemp[i], permutationTemp[i + 1]};
             Arrays.sort(tempTab);
             verticesPairs.add(tempTab);
@@ -81,7 +81,7 @@ public class Solution {
         Integer[] tempTab1 = {permutationTemp[permutationTemp.length / 2 - 1], permutationTemp[0]};
         Arrays.sort(tempTab1);
         verticesPairs.add(tempTab1);
-        for (int i = permutationTemp.length / 2; i < permutationTemp.length - 2; i++) {
+        for (int i = permutationTemp.length / 2; i < permutationTemp.length - 1; i++) {
             Integer[] tempTab = {permutationTemp[i], permutationTemp[i + 1]};
             Arrays.sort(tempTab);
             verticesPairs.add(tempTab);
@@ -97,7 +97,7 @@ public class Solution {
         List<Integer[]> commonVerticesPairs = new ArrayList<>();
         for (Integer[] pair : firstVerticesList) {
             for (Integer[] pair2 : secondVerticesList) {
-                if (pair.equals(pair2)) {
+                if (pair[0]==pair2[0]&&pair[1]==pair2[1]) {
                     commonVerticesPairs.add(pair);
                     break;
                 }
@@ -130,7 +130,7 @@ public class Solution {
 
     public Integer[] makeOneEdge(Integer[] pairA, Integer[] pairB) {
         int size = pairA.length + pairB.length;
-        Integer[] newEdge = new Integer[size];
+        Integer[] newEdge = new Integer[size-1];
         int index = 0;
         if (pairA[0] == pairB[0]) {
             for (int i = pairB.length - 1; i > 0; i--) {
