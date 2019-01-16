@@ -70,8 +70,24 @@ public class Main {
             methodImplementation=new TSPIterateGreedy(data,time,"results//3//random_");
             methodImplementation.solve(100);
         }
-        */
+*/
         System.out.println("AFTER 3 point");
+        /*
+        for(TSPFile data:tspFileList){
+            new File("results//4").mkdir();
+            Long time;
+            switch (data.getName()){
+                case "kroA100":time=Long.valueOf(1276816269);break;
+                case "kroA150":time= 4311943928L;break;
+                case "kroB100":time=Long.valueOf(1041458723);break;
+                case "kroB150":time= 4140755699L;break;
+                default:time= Long.valueOf(0);
+            }
+            methodImplementation=new TSPIterateGreedy(data,time,"results//4//random_");
+            methodImplementation.multiSolve(1000);
+        }
+*/
+        System.out.println("AFTER 4 point");
 
     }
 }

@@ -43,6 +43,5 @@ public class TSPIterateGreedy extends TSPGreedy {
         costChange += calculateCostChangeOnSwap(currentSolution.getPermutation(),b, c);
         currentSolution.swapElements(b,c);
         currentSolution.addCost(costChange);
-        System.out.println(currentSolution.toString());
     }
 }

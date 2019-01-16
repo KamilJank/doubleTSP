@@ -215,7 +215,7 @@ public abstract class TSP {
         }
     }
 
-    public void multisolveWithMileagePrints(int times) {
+    public void multiSolve(int times) {
         List<Solution> solutions = new ArrayList<>();
         try {
             fileWriter.write(problemInstance.getName() + "\n");
