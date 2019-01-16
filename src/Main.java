@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -29,5 +30,25 @@ public class Main {
         System.out.println("AFTER read");
         TSPHybridAlgorithm greedy=new TSPHybridAlgorithm(tspFileList.get(0),"random","1test1_g_r");
         greedy.solve(1);
+        /*
+        new File("results").mkdir();
+        TSP methodImplementation;
+        for(TSPFile data:tspFileList) {
+            new File("results//1").mkdir();
+            methodImplementation = new TSPOnlyFirstSolution(data, "heuristic1", "results//1//heuristic1_");
+            methodImplementation.solve(100);
+            methodImplementation = new TSPOnlyFirstSolution(data, "heuristic2", "results//1//heuristic2_");
+            methodImplementation.solve(100);
+        }
+        for(TSPFile data:tspFileList){
+            new File("results//2").mkdir();
+            methodImplementation=new TSPOnlyFirstSolution(data,"random","results//2//random_");
+            methodImplementation.solve(100);
+            methodImplementation=new TSPOnlyFirstSolution(data,"heuristic1","results//2//heuristic1_");
+            methodImplementation.solve(100);
+            methodImplementation=new TSPOnlyFirstSolution(data,"heuristic2","results//2//heuristic2_");
+            methodImplementation.solve(100);
+        }
+        */
     }
 }

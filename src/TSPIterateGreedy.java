@@ -1,8 +1,8 @@
 import java.util.Random;
 
 public class TSPIterateGreedy extends TSPGreedy {
-    public TSPIterateGreedy(TSPFile data, String firstSolutionMethod, long calculationTime, String fileName) {
-        super(data, firstSolutionMethod, fileName);
+    public TSPIterateGreedy(TSPFile data, long calculationTime, String fileName) {
+        super(data, "random", fileName);
         bestIterationSolution = new Solution(size);
         this.calculationTime = calculationTime;
         generator = new Random();

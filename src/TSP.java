@@ -1,6 +1,8 @@
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public abstract class TSP {
@@ -205,7 +207,8 @@ public abstract class TSP {
         avgSolution = sumOfSolutions / l;
         try {
             fileWriter.write(problemInstance.getName() + "\n");
-            fileWriter.write(bestSolution.toString() + ";" + worstSolution.toString() + ";" + avgSolution + ";" + avgTime);
+            fileWriter.write(bestSolution.toString() + "\n" + worstSolution.toString() +
+                    "\n"+startsNumber+";"+estimatedTime+";" + avgSolution + ";" + avgTime);
             fileWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -213,6 +216,7 @@ public abstract class TSP {
     }
 
     public void multisolveWithMileagePrints(int times) {
+        List<Solution> solutions = new ArrayList<>();
         try {
             fileWriter.write(problemInstance.getName() + "\n");
         } catch (IOException e) {
@@ -220,8 +224,18 @@ public abstract class TSP {
         }
         for (int i = 0; i < times; i++) {
             algorithm();
+            solutions.add(new Solution(currentSolution));
+        }
+        for (int i = 0; i < times; i++) {
+            Long similarity= Long.valueOf(0);
+            for (int j = 0; j < times; j++) {
+                if(i!=j){
+                    similarity+=solutions.get(i).calculateSimilarity(solutions.get(j));
+                }
+            }
+            similarity/=(times-1);
             try {
-                fileWriter.write(currentSolution.toString() + "\n");
+                fileWriter.write(similarity+";"+solutions.get(i).getCost() + "\n");
             } catch (IOException e) {
                 e.printStackTrace();
             }

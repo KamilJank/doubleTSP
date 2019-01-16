@@ -69,8 +69,11 @@ public class Solution {
         }
         return false;
     }
-
+    private List<Integer[]> vertices=null;
     private List<Integer[]> getVerticesPairs(int[] permutationTemp) {
+        if(vertices!=null){
+            return vertices;
+        }
         List<Integer[]> verticesPairs = new ArrayList<>();
         for (int i = 0; i < permutationTemp.length / 2 - 1; i++) {
             Integer[] tempTab = {permutationTemp[i], permutationTemp[i + 1]};
@@ -88,9 +91,9 @@ public class Solution {
         Integer[] tempTab2 = {permutationTemp[permutationTemp.length - 1], permutationTemp[permutationTemp.length / 2]};
         Arrays.sort(tempTab2);
         verticesPairs.add(tempTab2);
+        vertices=verticesPairs;
         return verticesPairs;
     }
-
 
     public List<Integer[]> getCommonEdgesList(List<Integer[]> firstVerticesList, List<Integer[]> secondVerticesList) {
         List<Integer[]> commonVerticesPairs = new ArrayList<>();
