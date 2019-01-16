@@ -25,13 +25,6 @@ public class Main {
             e.printStackTrace();
         }
 
-        for(Double[] li : tspFileList.get(0).getDistMatrix()){
-            System.out.println(Arrays.toString(li));
-        }
-        System.out.println("AFTER read");
-        TSPHybridAlgorithm greedy=new TSPHybridAlgorithm(tspFileList.get(0),"random","1test1_g_r");
-        greedy.solve(1);
-
         System.out.println("AFTER read");
         new File("results").mkdir();
         TSP methodImplementation;
@@ -72,22 +65,46 @@ public class Main {
         }
 */
         System.out.println("AFTER 3 point");
-        /*
-        for(TSPFile data:tspFileList){
+
+        for (TSPFile data : tspFileList) {
             new File("results//4").mkdir();
             Long time;
-            switch (data.getName()){
-                case "kroA100":time=Long.valueOf(1276816269);break;
-                case "kroA150":time= 4311943928L;break;
-                case "kroB100":time=Long.valueOf(1041458723);break;
-                case "kroB150":time= 4140755699L;break;
-                default:time= Long.valueOf(0);
+            switch (data.getName()) {
+                case "kroA100":
+                    time = 1276816269L;
+                    break;
+                case "kroA150":
+                    time = 4311943928L;
+                    break;
+                case "kroB100":
+                    time = 1041458723L;
+                    break;
+                case "kroB150":
+                    time = 4140755699L;
+                    break;
+                default:
+                    time = 0L;
             }
-            methodImplementation=new TSPIterateGreedy(data,time,"results//4//random_");
+            methodImplementation = new TSPIterateGreedy(data, time, "results//4//random_");
             methodImplementation.multiSolve(1000);
         }
-*/
+
         System.out.println("AFTER 4 point");
 
+        for (TSPFile data : tspFileList) {
+            new File("results//5_1").mkdir();
+            methodImplementation = new TSPHybridAlgorithm(data, "results//5_1//h1_");
+            methodImplementation.solve(100);
+        }
+
+        System.out.println("AFTER 5_1 point");
+
+        for (TSPFile data : tspFileList) {
+            new File("results//5_2").mkdir();
+            methodImplementation = new TSPHybridAlgorithm(data, "results//5_2//h1_");
+            methodImplementation.multiSolve(1000);
+        }
+
+        System.out.println("AFTER 5_2 point");
     }
 }

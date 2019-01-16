@@ -10,8 +10,8 @@ public class TSPHybridAlgorithm extends TSPGreedy {
     private List<Solution> population;
     private Random generator;
 
-    public TSPHybridAlgorithm(TSPFile data, String firstSolutionMethod, String fileName) {
-        super(data, firstSolutionMethod, fileName);
+    public TSPHybridAlgorithm(TSPFile data, String fileName) {
+        super(data, "heuristic1", fileName);
         populationSize = (int) Math.sqrt(size);
         population = new ArrayList<>();
         generator = new Random();
@@ -19,14 +19,14 @@ public class TSPHybridAlgorithm extends TSPGreedy {
 
     @Override
     void algorithm() {
-        generateRandomPopulation();
+        generateFirstPopulation();
         int i = 0;
         Double bestCost = population.get(0).getCost();
         do {
             Solution s = recombination();
             localSearch(s);
             evaluateSolutionAndAddToPopulation(s);
-            if (bestCost == population.get(0).getCost()) {
+            if (bestCost <= population.get(0).getCost()) {
                 i++;
             } else {
                 i = 0;
@@ -51,11 +51,6 @@ public class TSPHybridAlgorithm extends TSPGreedy {
     private Solution recombination() {
         Solution parentA = population.get(generator.nextInt(populationSize));
         Solution parentB = population.get(generator.nextInt(populationSize));
-        System.out.println("PAIRS");
-        //SORT list
-        for (Integer[] i : parentA.getAllCommonSubgraphs(parentB)) {
-            System.out.println(Arrays.toString(i));
-        }
         int[] childPermutation = new int[size];
         int TS1Size = 0;
         int TS2Size = 0;
@@ -80,20 +75,17 @@ public class TSPHybridAlgorithm extends TSPGreedy {
         return childSolution;
     }
 
-    private void generateRandomPopulation() {
+    private void generateFirstPopulation() {
         while (population.size() < populationSize) {
             Solution p = new Solution(getFirstSolution());
             p.setCost(calculateCost(p.getPermutation()));
+            getSolution(p);
             addSolutionToPopulation(p);
         }
     }
 
     private boolean addSolutionToPopulation(Solution solution) {
-        boolean unique = true;
-        for (Solution sol : population.stream().filter(p -> solution.equals(p)).collect(Collectors.toList())) {
-            unique = false;
-            break;
-        }
+        boolean unique = population.stream().filter(solution::equals).collect(Collectors.toList()).stream().noneMatch(sol -> true);
         if (unique) {
             int i = 0;
             for (Solution s : population) {
