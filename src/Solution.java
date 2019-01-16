@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Solution {
     private Double cost;
@@ -139,51 +137,59 @@ public class Solution {
     }
 
     public Integer[] makeOneEdge(Integer[] pairA, Integer[] pairB) {
-        int size = pairA.length + pairB.length;
-        Integer[] newEdge = new Integer[size-1];
+        int size = pairA.length + pairB.length-1;
+        if(size>this.permutation.length/2){
+            size=this.permutation.length/2;
+        }
+        Integer[] newEdge = new Integer[size];
         int index = 0;
-        if (pairA[0] == pairB[0]) {
-            for (int i = pairB.length - 1; i > 0; i--) {
-                newEdge[index] = pairB[i];
-                index++;
-            }
-            for (int i = 0; i < pairA.length; i++) {
-                newEdge[index] = pairA[i];
-                index++;
-            }
-
-        } else {
-            if (pairA[0] == pairB[pairB.length - 1]) {
-                for (int i = 0; i < pairB.length; i++) {
+        try {
+            if (pairA[0] == pairB[0]) {
+                for (int i = pairB.length - 1; i > 0; i--) {
                     newEdge[index] = pairB[i];
                     index++;
                 }
-                for (int i = 1; i < pairA.length; i++) {
+                for (int i = 0; i < pairA.length; i++) {
                     newEdge[index] = pairA[i];
                     index++;
                 }
-            } else {
-                if (pairA[pairA.length - 1] == pairB[0]) {
-                    for (int i = 0; i < pairA.length; i++) {
-                        newEdge[index] = pairA[i];
-                        index++;
-                    }
-                    for (int i = 1; i < pairB.length; i++) {
-                        newEdge[index] = pairB[i];
-                        index++;
-                    }
 
-                } else {
-                    for (int i = 0; i < pairA.length; i++) {
+            } else {
+                if (pairA[0] == pairB[pairB.length - 1]) {
+                    for (int i = 0; i < pairB.length; i++) {
+                        newEdge[index] = pairB[i];
+                        index++;
+                    }
+                    for (int i = 1; i < pairA.length; i++) {
                         newEdge[index] = pairA[i];
                         index++;
                     }
-                    for (int i = pairB.length - 2; i >= 0; i--) {
-                        newEdge[index] = pairB[i];
-                        index++;
+                } else {
+                    if (pairA[pairA.length - 1] == pairB[0]) {
+                        for (int i = 0; i < pairA.length; i++) {
+                            newEdge[index] = pairA[i];
+                            index++;
+                        }
+                        for (int i = 1; i < pairB.length; i++) {
+                            newEdge[index] = pairB[i];
+                            index++;
+                        }
+
+                    } else {
+                        for (int i = 0; i < pairA.length; i++) {
+                            newEdge[index] = pairA[i];
+                            index++;
+                        }
+                        for (int i = pairB.length - 2; i >= 0; i--) {
+                            newEdge[index] = pairB[i];
+                            index++;
+                        }
                     }
                 }
             }
+        }
+        catch (ArrayIndexOutOfBoundsException e){
+            return newEdge;
         }
         return newEdge;
     }
@@ -206,13 +212,19 @@ public class Solution {
     }
 
     public List<Integer[]> getAllCommonSubgraphs(Solution secondSolution) {
-        List<Integer[]> commonVerticesPairs = getCommonEdgesList(getVerticesPairs(), secondSolution.getVerticesPairs());
-        List<Integer[]> finalList=getFinalEdgesList(commonVerticesPairs);
+        List<Integer[]> commonEdgesList = getCommonEdgesList(getVerticesPairs(), secondSolution.getVerticesPairs());
+        List<Integer[]> finalList=getFinalEdgesList(commonEdgesList);
        List<Integer> vertices = getCommonVerticesList(finalList);
         for (Integer vertex:vertices) {
             Integer[] tempTab={vertex};
             finalList.add(0,tempTab);
         }
+        Collections.sort(finalList, new Comparator<Integer[]>() {
+            @Override
+            public int compare(Integer[] o1, Integer[] o2) {
+                return o2.length-o1.length;
+            }
+        });
         return finalList;
     }
 
