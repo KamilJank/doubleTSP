@@ -227,7 +227,7 @@ public abstract class TSP {
             solutions.add(new Solution(currentSolution));
         }
         for (int i = 0; i < times; i++) {
-            Long similarity= Long.valueOf(0);
+            Double similarity= Double.valueOf(0);
             for (int j = 0; j < times; j++) {
                 if(i!=j){
                     similarity+=solutions.get(i).calculateSimilarity(solutions.get(j));

@@ -65,7 +65,7 @@ public class Main {
         }
 */
         System.out.println("AFTER 3 point");
-
+/*
         for (TSPFile data : tspFileList) {
             new File("results//4").mkdir();
             Long time;
@@ -88,9 +88,9 @@ public class Main {
             methodImplementation = new TSPIterateGreedy(data, time, "results//4//random_");
             methodImplementation.multiSolve(1000);
         }
-
+*/
         System.out.println("AFTER 4 point");
-
+/*
         for (TSPFile data : tspFileList) {
             new File("results//5_1").mkdir();
             methodImplementation = new TSPHybridAlgorithm(data, "results//5_1//h1_");
@@ -106,5 +106,6 @@ public class Main {
         }
 
         System.out.println("AFTER 5_2 point");
+        */
     }
 }

@@ -69,7 +69,7 @@ public class Solution {
 
     public boolean equals(Solution sol) {
         if (this.cost.equals(sol.cost)) {
-            if (this.calculateSimilarity(sol)==this.permutation.length) {
+            if (Objects.equals(this.calculateSimilarity(sol),this.permutation.length)) {
                 return true;
             }
         }
@@ -105,7 +105,7 @@ public class Solution {
         List<Integer[]> commonVerticesPairs = new ArrayList<>();
         for (Integer[] pair : firstVerticesList) {
             for (Integer[] pair2 : secondVerticesList) {
-                if (pair[0]==pair2[0]&&pair[1]==pair2[1]) {
+                if (Objects.equals(pair[0],pair2[0])&&Objects.equals(pair[1],pair2[1])) {
                     commonVerticesPairs.add(pair);
                     break;
                 }
@@ -129,7 +129,7 @@ public class Solution {
 
     public Integer[] findPair(Integer[] pairA, List<Integer[]> tempList) {
         for (Integer[] pair:tempList) {
-            if(pair[0]==pairA[0]||pair[0]==pairA[pairA.length-1]||pair[pair.length-1]==pairA[0]||pair[pair.length-1]==pairA[pairA.length-1]){
+            if(Objects.equals(pair[0],pairA[0])||Objects.equals(pair[0],pairA[pairA.length-1])||Objects.equals(pair[pair.length-1],pairA[0])||Objects.equals(pair[pair.length-1],pairA[pairA.length-1])){
                 return pair;
             }
         }
@@ -144,7 +144,7 @@ public class Solution {
         Integer[] newEdge = new Integer[size];
         int index = 0;
         try {
-            if (pairA[0] == pairB[0]) {
+            if (Objects.equals(pairA[0],pairB[0])) {
                 for (int i = pairB.length - 1; i > 0; i--) {
                     newEdge[index] = pairB[i];
                     index++;
@@ -155,7 +155,7 @@ public class Solution {
                 }
 
             } else {
-                if (pairA[0] == pairB[pairB.length - 1]) {
+                if (Objects.equals(pairA[0],pairB[pairB.length - 1])) {
                     for (int i = 0; i < pairB.length; i++) {
                         newEdge[index] = pairB[i];
                         index++;
@@ -165,7 +165,7 @@ public class Solution {
                         index++;
                     }
                 } else {
-                    if (pairA[pairA.length - 1] == pairB[0]) {
+                    if (Objects.equals(pairA[pairA.length - 1],pairB[0])) {
                         for (int i = 0; i < pairA.length; i++) {
                             newEdge[index] = pairA[i];
                             index++;
