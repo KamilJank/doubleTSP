@@ -8,8 +8,8 @@ public class TSPHybridAlgorithm extends TSPGreedy {
     private List<Solution> population;
     private Random generator;
 
-    public TSPHybridAlgorithm(TSPFile data, String fileName) {
-        super(data, "heuristic1", fileName);
+    public TSPHybridAlgorithm(TSPFile data,String firstSolutionMethod, String fileName) {
+        super(data, firstSolutionMethod, fileName);
         populationSize = (int) Math.sqrt(size);
         population = new ArrayList<>();
         generator = new Random();

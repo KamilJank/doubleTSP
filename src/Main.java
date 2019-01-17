@@ -4,7 +4,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -93,19 +92,19 @@ public class Main {
 /*
         for (TSPFile data : tspFileList) {
             new File("results//5_1").mkdir();
-            methodImplementation = new TSPHybridAlgorithm(data, "results//5_1//h1_");
+            methodImplementation = new TSPHybridAlgorithm(data,"heuristic1", "results//5_1//h1_");
             methodImplementation.solve(100);
         }
-
+*/
         System.out.println("AFTER 5_1 point");
 
         for (TSPFile data : tspFileList) {
             new File("results//5_2").mkdir();
-            methodImplementation = new TSPHybridAlgorithm(data, "results//5_2//h1_");
+            methodImplementation = new TSPHybridAlgorithm(data, "heuristic1","results//5_2//h1_");
             methodImplementation.multiSolve(1000);
         }
 
         System.out.println("AFTER 5_2 point");
-        */
+
     }
 }
