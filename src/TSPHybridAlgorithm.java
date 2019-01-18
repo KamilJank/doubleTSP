@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -8,7 +9,7 @@ public class TSPHybridAlgorithm extends TSPGreedy {
     private List<Solution> population;
     private Random generator;
 
-    public TSPHybridAlgorithm(TSPFile data,String firstSolutionMethod, String fileName) {
+    public TSPHybridAlgorithm(TSPFile data, String firstSolutionMethod, String fileName) {
         super(data, firstSolutionMethod, fileName);
         populationSize = (int) Math.sqrt(size);
         population = new ArrayList<>();
@@ -62,10 +63,23 @@ public class TSPHybridAlgorithm extends TSPGreedy {
                 }
                 TS1Size += longestSubgraph.length;
             } else {
-                for (int i = TS2Size; i < TS2Size + longestSubgraph.length; i++) {
-                    childPermutation[i + halfSize] = longestSubgraph[i - TS2Size];
+                if (TS2Size + longestSubgraph.length <= halfSize) {
+                    for (int i = TS2Size; i < TS2Size + longestSubgraph.length; i++) {
+                        childPermutation[i + halfSize] = longestSubgraph[i - TS2Size];
+                    }
+                    TS2Size += longestSubgraph.length;
+                } else {
+                    for (int i = TS1Size; i < halfSize; i++) {
+                        childPermutation[i] = longestSubgraph[i - TS1Size];
+                    }
+                    int firstCapacity = halfSize - TS1Size;
+                    TS1Size = halfSize;
+                    for (int i = TS2Size; i < TS2Size + longestSubgraph.length - firstCapacity; i++) {
+                        childPermutation[i + halfSize] = longestSubgraph[i + firstCapacity - TS2Size];
+                    }
+                    TS2Size += longestSubgraph.length - firstCapacity;
+
                 }
-                TS2Size += longestSubgraph.length;
             }
         }
         Solution childSolution = new Solution(childPermutation);
@@ -74,6 +88,7 @@ public class TSPHybridAlgorithm extends TSPGreedy {
     }
 
     private void generateFirstPopulation() {
+        population = new ArrayList<>();
         while (population.size() < populationSize) {
             Solution p = new Solution(getFirstSolution());
             p.setCost(calculateCost(p.getPermutation()));

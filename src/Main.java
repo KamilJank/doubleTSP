@@ -93,11 +93,11 @@ public class Main {
         for (TSPFile data : tspFileList) {
             new File("results//5_1").mkdir();
             methodImplementation = new TSPHybridAlgorithm(data,"heuristic1", "results//5_1//h1_");
-            methodImplementation.solve(100);
+            methodImplementation.solve(50);
         }
 */
         System.out.println("AFTER 5_1 point");
-
+/*
         for (TSPFile data : tspFileList) {
             new File("results//5_2").mkdir();
             methodImplementation = new TSPHybridAlgorithm(data, "heuristic1","results//5_2//h1_");
@@ -105,6 +105,7 @@ public class Main {
         }
 
         System.out.println("AFTER 5_2 point");
+        */
 
     }
 }
