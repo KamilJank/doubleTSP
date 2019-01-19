@@ -24,33 +24,41 @@ def readVertices(fileName):
     tsp=[solution[:halfsize],solution[halfsize:]]
     return [getPairs(ts) for ts in tsp]
 
-def drawPaths(positions,pairs):
+def drawPaths(positions,pairs,fName):
     edges=[*pairs[0],*pairs[1]]
     G=nx.DiGraph()
     G.add_nodes_from(range(len(positions)))
     G.add_edges_from(edges)
     nx.draw(G,pos=positions,node_size=10,arrows=False)
-    plt.show()
+    #plt.show()
+    plt.savefig("./graphs/"+fName+".pdf", bbox_inches='tight')
+    plt.close()
     #TODO save not show
+    #x śr odleglosc od wszystkich optimow lokalnych
+    #y długośćściezki
 
 def drawAllGraphs():
     for instance in ["kroA100","kroA150","kroB100","kroB150"]:
         pos=readPositions("./data/"+instance+".tsp")
         for experiment in ["1/heuristic1_","1/heuristic2_","2/heuristic1_","2/heuristic2_","2/random_","3/random_","5_1/h1_"]:
             ver=readVertices("./results/"+experiment+instance+".txt")
-            drawPaths(pos,ver)
+            drawPaths(pos,ver,(experiment+instance))
 
-def drawSimilarityPlot(fileName):
+def drawSimilarityPlot(fileName,fNam):
     f = open(fileName, "r")
     lines=np.array([l.split(';') for l in f.readlines()[1:]])
     similarity=np.array([[float(l[0]),int(l[1][:-3])] for l in lines])
     plt.plot(similarity[:,0], similarity[:,1], 'k.')
-    plt.show()
+    #plt.show()
+    plt.xlabel("Średnia odległość od wszystkich optimów lokalnych")
+    plt.ylabel("Długość ścieżki")
+    plt.savefig("./plots/"+fNam+".pdf", bbox_inches='tight')
+    plt.close()
     #TODO save not show
 
 def drawAllSimPlots():
     for experiment in ["4/random_","5_2/h1_"]:
         for instance in ["kroA100","kroA150","kroB100","kroB150"]:
-            drawSimilarityPlot("./results/"+experiment+instance+".txt")
+            drawSimilarityPlot("./results/"+experiment+instance+".txt",(experiment+instance))
 #drawAllGraphs()
 drawAllSimPlots()
