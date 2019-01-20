@@ -20,4 +20,23 @@ def generateAllTables():
     for experiment in ["1/heuristic1_","1/heuristic2_","2/heuristic1_","2/heuristic2_","2/random_","3/random_","5_1/h1_"]:
         generateTable(experiment)
 
-generateAllTables()
+def generatePermutationsTable(experimentName):
+    table=[]#["Jakość najlepszego rozwiązania","Jakość najgorszego rozwiązania","Średnia jakość rozwiązań","Średni czas działania"]
+    writer = open("./results/"+experimentName+"perms.txt", "w")
+    writer.write("Instancja & Lista wierzchołków 1 & Lista wierzchołków 2 & Jakość rozwiązania\n")
+    for instance in ["kroA100","kroA150","kroB100","kroB150"]:
+        f = open("./results/"+experimentName+instance+".txt", "r")
+        line=f.readlines()[1].split(';')
+        f.close()
+        perm=line[0][1:-1].split(", ")
+        size=int(len(perm)/2)
+        p1=','.join(str(e) for e in perm[:size])
+        p2=','.join(str(e) for e in perm[size:])
+        writer.write(instance+" & "+p1+" & "+p2+" & "+line[1])
+    writer.close()
+
+def generateAllTables2():
+    for experiment in ["1/heuristic1_","1/heuristic2_","2/heuristic1_","2/heuristic2_","2/random_","3/random_","5_1/h1_"]:
+        generatePermutationsTable(experiment)
+
+generateAllTables2()
