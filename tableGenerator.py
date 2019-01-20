@@ -30,8 +30,8 @@ def generatePermutationsTable(experimentName):
         f.close()
         perm=line[0][1:-1].split(", ")
         size=int(len(perm)/2)
-        p1=','.join(str(e) for e in perm[:size])
-        p2=','.join(str(e) for e in perm[size:])
+        p1=', '.join(str(e) for e in perm[:size])
+        p2=', '.join(str(e) for e in perm[size:])
         writer.write(instance+" & "+p1+" & "+p2+" & "+line[1])
     writer.close()
 
